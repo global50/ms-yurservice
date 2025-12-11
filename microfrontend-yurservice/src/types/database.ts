@@ -1,5 +1,3 @@
-// Type definitions for YurService database entities
-
 export interface Region {
   id: number
   name: string
@@ -11,6 +9,9 @@ export interface Region {
 export interface BlockData {
   label?: string
   url?: string
+  title?: string
+  link?: string
+  text?: string
   [key: string]: any
 }
 
@@ -46,3 +47,4 @@ export interface YurServiceResource {
 }
 
 export type ResourceType = 'court' | 'gov' | 'tool'
+

@@ -1,15 +1,13 @@
-// YurService page with database-driven resource catalog
-
 import { useState, useMemo } from "react"
-import { Input } from "@/components/ui/input"
-import { Card } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
+import { Input } from "@shared/components/ui/input"
+import { Card } from "@shared/components/ui/card"
+import { Button } from "@shared/components/ui/button"
 import { Search, AlertCircle } from "lucide-react"
-import { ResourceCard } from "./components/ResourceCard"
-import { RegionSelect } from "./components/RegionSelect"
-import { useYurServiceData } from "./hooks/use-yurservice-data"
-import { mapDatabaseResourceToUI } from "./lib/resource-mapper"
-import { Alert, AlertDescription } from "@/components/ui/alert"
+import { ResourceCard } from "./ResourceCard"
+import { RegionSelect } from "./RegionSelect"
+import { useYurServiceData } from "../../hooks/use-yurservice-data"
+import { mapDatabaseResourceToUI } from "../../lib/resource-mapper"
+import { Alert, AlertDescription } from "@shared/components/ui/alert"
 
 const ITEMS_PER_PAGE = 18
 
@@ -241,3 +239,4 @@ export function YurServicePage() {
     </div>
   )
 }
+

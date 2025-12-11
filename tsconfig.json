@@ -9,7 +9,8 @@
     "paths": {
       "@/*": ["./src/*"],
       "@apps/*": ["./apps/*"],
-      "@shared/*": ["./shared-src/*"]
+      "@shared/*": ["./shared-src/*"],
+      "@yurservice/*": ["./microfrontend-yurservice/src/*"]
     }
   }
 }

@@ -1,11 +1,11 @@
 // Expandable card component for displaying resource information
 
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
+import { Card, CardContent, CardHeader, CardTitle } from "@shared/components/ui/card"
+import { Button } from "@shared/components/ui/button"
+import { Avatar, AvatarFallback, AvatarImage } from "@shared/components/ui/avatar"
 import { ChevronDown, ChevronUp, ExternalLink, Globe, Phone, Mail, MapPin, Clock, Share, List } from "lucide-react"
-import type { Resource, ResourceLink } from "../types/resource"
-import { useToast } from "@/hooks/use-toast"
+import type { Resource, ResourceLink } from "../../types/resource"
+import { useToast } from "@shared/hooks/use-toast"
 
 interface ResourceCardProps {
   resource: Resource
@@ -114,7 +114,6 @@ export function ResourceCard({ resource, isExpanded, onToggle }: ResourceCardPro
 
             {sortedLinks.length > 0 && (
               <div>
-                {/*<h4 className="text-sm font-medium mb-2">Quick Links</h4>*/}
                 <div className="space-y-1">
                   {sortedLinks.map((link, index) => (
                     <Button
@@ -161,7 +160,6 @@ export function ResourceCard({ resource, isExpanded, onToggle }: ResourceCardPro
 
             {resource.contacts && (
               <div>
-                {/*<h4 className="text-sm font-medium mb-2">Contact Information</h4>*/}
                 <div className="space-y-2 text-sm text-muted-foreground">
                   {resource.contacts.phone && (
                     <div className="flex items-start gap-2">

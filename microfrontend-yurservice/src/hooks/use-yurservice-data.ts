@@ -1,7 +1,5 @@
-// Hook for fetching YurService resources and regions from database
-
 import { useState, useEffect } from 'react'
-import { supabase } from '@/lib/supabase'
+import { supabase } from '@shared/lib/supabase'
 import type { YurServiceResource, Region } from '../types/database'
 
 interface UseYurServiceDataReturn {
@@ -50,7 +48,6 @@ export function useYurServiceData(): UseYurServiceDataReturn {
         setRegions(regionsResult.data || [])
       } catch (err) {
         setError(err instanceof Error ? err.message : 'Failed to fetch data')
-        console.error('Error fetching YurService data:', err)
       } finally {
         setIsLoading(false)
       }
@@ -61,3 +58,4 @@ export function useYurServiceData(): UseYurServiceDataReturn {
 
   return { resources, regions, isLoading, error }
 }
+

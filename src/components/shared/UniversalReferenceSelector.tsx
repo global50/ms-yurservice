@@ -23,7 +23,7 @@ import {
   Loader2,
   ChevronsUpDown,
 } from "lucide-react";
-import { supabase } from "@/lib/supabase";
+import { supabase } from "@shared/lib/supabase";
 
 type ReferenceType = "city" | "country" | "region" | "university";
 

@@ -2,7 +2,7 @@ import { Header } from "/apps/header/Header";
 import { Navigation } from "/apps/navigation/Navigation";
 import { MobileNav } from "/apps/mobileNav/MobileNav";
 import { HomePage } from "/apps/home/HomePage";
-import { YurServicePage } from "/apps/yurservice/YurServicePage";
+import { YurServicePage } from "../microfrontend-yurservice/src/components/yurservice/YurServicePage";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Toaster } from "@/components/ui/toaster";
 import { Routes, Route, useLocation } from "react-router-dom";

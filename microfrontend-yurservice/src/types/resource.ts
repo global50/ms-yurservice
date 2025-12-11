@@ -1,5 +1,3 @@
-// Type definitions for resource catalog entries
-
 export interface ResourceLink {
   label: string
   url: string
@@ -25,4 +23,7 @@ export interface Resource {
   slug?: string
   links: ResourceLink[]
   contacts?: ResourceContact
+  type?: string
+  region_id?: number | null
 }
+

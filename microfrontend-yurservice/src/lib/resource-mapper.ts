@@ -1,5 +1,3 @@
-// Utility functions to map database resources to UI resource format
-
 import type { YurServiceResource } from '../types/database'
 import type { Resource, ResourceLink, ResourceContact } from '../types/resource'
 
@@ -72,5 +70,8 @@ export function mapDatabaseResourceToUI(dbResource: YurServiceResource): Resourc
     slug: dbResource.slug || undefined,
     links,
     contacts,
+    type: dbResource.type,
+    region_id: dbResource.region_id,
   }
 }
+

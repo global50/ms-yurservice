@@ -3,12 +3,24 @@ import react from '@vitejs/plugin-react';
 import { defineConfig } from 'vite';
 
 export default defineConfig({
-  plugins: [react()],
+  plugins: [
+    react(),
+    {
+      name: 'resolve-microfrontend-aliases',
+      resolveId(id, importer) {
+        if (id.startsWith('@/') && importer?.includes('microfrontend-yurservice')) {
+          return path.resolve(__dirname, './microfrontend-yurservice/src', id.slice(2));
+        }
+        return null;
+      },
+    },
+  ],
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),
       '@apps': path.resolve(__dirname, './apps'),
       '@shared': path.resolve(__dirname, './shared-src'),
+      '@yurservice': path.resolve(__dirname, './microfrontend-yurservice/src'),
     },
   },
   optimizeDeps: {

@@ -2,12 +2,9 @@
 export default {
   darkMode: ['class'],
   content: [
-  './apps/**/*.{ts,tsx}',
-  './components/**/*.{ts,tsx}',
-  './src/**/*.{ts,tsx}',
-  './shared-src/**/*.{ts,tsx}',
-  './microfrontend-yurservice/src/**/*.{ts,tsx}',
-],
+    './src/**/*.{ts,tsx}',
+    '../shared-src/**/*.{ts,tsx}',
+  ],
   theme: {
     extend: {
       borderRadius: {
@@ -83,3 +80,4 @@ export default {
   },
   plugins: [require('tailwindcss-animate')],
 };
+

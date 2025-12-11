@@ -16,7 +16,7 @@ import {
   PopoverTrigger,
 } from "@/components/ui/popover";
 import { ChevronDownIcon, Loader2 } from "lucide-react";
-import { supabase } from "@/lib/supabase";
+import { supabase } from "@shared/lib/supabase";
 
 interface DatabaseDropdownProps {
   table: string;
