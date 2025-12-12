@@ -1924,7 +1924,7 @@
     "@types/babel__core" "^7.20.5"
     react-refresh "^0.14.2"
 
-"@yurservice/microfrontend@file:/home/project/microfrontend-yurservice":
+"@yurservice/microfrontend@file:/tmp/cc-agent/61403445/project/microfrontend-yurservice":
   version "1.0.0"
   resolved "file:microfrontend-yurservice"
 
