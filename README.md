@@ -7,14 +7,17 @@
 ### Клонирование проекта
 
 ```bash
-# Клонируйте проект с submodule
-git clone --recurse-submodules https://github.com/your-org/ms-yurservice.git
+# Клонируйте проект с submodule (рекомендуется)
+git clone --recurse-submodules https://github.com/global50/ms-yurservice.git
+cd ms-yurservice
 
 # Или после обычного клона
-git clone https://github.com/your-org/ms-yurservice.git
+git clone https://github.com/global50/ms-yurservice.git
 cd ms-yurservice
 git submodule update --init --recursive
 ```
+
+> 📖 **Для клиентов**: См. [CLIENT_SETUP.md](./CLIENT_SETUP.md) - подробная инструкция по запуску проекта
 
 ### Установка зависимостей
 
@@ -24,7 +27,7 @@ npm install
 
 Зависимости устанавливаются автоматически для основного проекта и микросервиса через npm workspaces (без дублирования).
 
-> **Примечание**: Микрофронтенд `microfrontend-yurservice` подключен как [git submodule](https://git-scm.com/book/en/v2/Git-Tools-Submodules) из отдельного репозитория. Подробнее см. [MIGRATION_GUIDE.md](./MIGRATION_GUIDE.md)
+> **Примечание**: Микрофронтенд `microfrontend-yurservice` подключен как [git submodule](https://git-scm.com/book/en/v2/Git-Tools-Submodules) из отдельного репозитория [remote-yurservice](https://github.com/global50/remote-yurservice.git).
 
 ### Настройка переменных окружения
 
@@ -130,9 +133,9 @@ Vite автоматически обрабатывает импорты и ра�
 
 ## 📚 Дополнительная документация
 
+- [CLIENT_SETUP.md](./CLIENT_SETUP.md) - **инструкция для клиентов по запуску проекта**
 - [START.md](./START.md) - подробная инструкция по запуску
-- [INTEGRATION_GUIDE.md](./INTEGRATION_GUIDE.md) - руководство по интеграции
-- [MIGRATION_GUIDE.md](./MIGRATION_GUIDE.md) - руководство по миграции микрофронтенда в отдельный репозиторий
+- [SUBMODULE_TROUBLESHOOTING.md](./SUBMODULE_TROUBLESHOOTING.md) - решение проблем с git submodule
 - [REVIEW.md](./REVIEW.md) - отчет о выполненной работе
 - [microfrontend-yurservice/README.md](./microfrontend-yurservice/README.md) - документация микросервиса
 
