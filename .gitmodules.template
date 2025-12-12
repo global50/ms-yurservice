@@ -1,4 +1,0 @@
-[submodule "microfrontend-yurservice"]
-	path = microfrontend-yurservice
-	url = https://github.com/global50/remote-yurservice.git
-
