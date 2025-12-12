@@ -4,6 +4,18 @@
 
 ## 🚀 Быстрый старт
 
+### Клонирование проекта
+
+```bash
+# Клонируйте проект с submodule
+git clone --recurse-submodules https://github.com/your-org/ms-yurservice.git
+
+# Или после обычного клона
+git clone https://github.com/your-org/ms-yurservice.git
+cd ms-yurservice
+git submodule update --init --recursive
+```
+
 ### Установка зависимостей
 
 ```bash
@@ -11,6 +23,8 @@ npm install
 ```
 
 Зависимости устанавливаются автоматически для основного проекта и микросервиса через npm workspaces (без дублирования).
+
+> **Примечание**: Микрофронтенд `microfrontend-yurservice` подключен как [git submodule](https://git-scm.com/book/en/v2/Git-Tools-Submodules) из отдельного репозитория. Подробнее см. [MIGRATION_GUIDE.md](./MIGRATION_GUIDE.md)
 
 ### Настройка переменных окружения
 
@@ -118,5 +132,40 @@ Vite автоматически обрабатывает импорты и ра�
 
 - [START.md](./START.md) - подробная инструкция по запуску
 - [INTEGRATION_GUIDE.md](./INTEGRATION_GUIDE.md) - руководство по интеграции
+- [MIGRATION_GUIDE.md](./MIGRATION_GUIDE.md) - руководство по миграции микрофронтенда в отдельный репозиторий
 - [REVIEW.md](./REVIEW.md) - отчет о выполненной работе
 - [microfrontend-yurservice/README.md](./microfrontend-yurservice/README.md) - документация микросервиса
+
+## 🔗 Работа с Git Submodule
+
+Микрофронтенд подключен как git submodule из репозитория [remote-yurservice](https://github.com/global50/remote-yurservice.git).
+
+### Обновление submodule
+
+```bash
+# Обновить до последней версии из main ветки
+git submodule update --remote microfrontend-yurservice
+
+# Или перейти в директорию и обновить вручную
+cd microfrontend-yurservice
+git pull origin main
+cd ..
+git add microfrontend-yurservice
+git commit -m "Update yurservice submodule"
+```
+
+### Разработка в submodule
+
+```bash
+cd microfrontend-yurservice
+# Внесите изменения, закоммитьте и отправьте
+git add .
+git commit -m "Your changes"
+git push origin main
+
+# Вернитесь в основной проект и обновьте ссылку
+cd ..
+git add microfrontend-yurservice
+git commit -m "Update yurservice submodule"
+git push
+```
