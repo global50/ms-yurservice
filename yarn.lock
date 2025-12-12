@@ -1924,10 +1924,6 @@
     "@types/babel__core" "^7.20.5"
     react-refresh "^0.14.2"
 
-"@yurservice/microfrontend@file:/tmp/cc-agent/61403445/project/microfrontend-yurservice":
-  version "1.0.0"
-  resolved "file:microfrontend-yurservice"
-
 acorn-jsx@^5.3.2:
   version "5.3.2"
   resolved "https://registry.npmjs.org/acorn-jsx/-/acorn-jsx-5.3.2.tgz"
